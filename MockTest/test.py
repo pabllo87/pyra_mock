@@ -119,20 +119,8 @@ class ProductionClassTest(unittest.TestCase):
         Mock wywala sie bledem
         TypeError: 'Mock' object does not
         support item assignment
-
-
-        Mock vs MagicMock
-        Tests should be minimal and mock objects should be
-        minimally functional so that you are sure exactly
-        what you're testing. If you use MagicMock just because
-        is does more but you're not explicitly testing all that
-        "more" you run the risk of a test failing because of a
-        default MagicMock behavior. This failure might reflect
-        something about MagicMock's defaults more than the the thing
-        it's supposed to mock. Even worse, you run the risk of a test
-        succeeding when it should have failed. The risk is small but if
-        this happens it will waste a lot of your time.
         """
+
         mock = MagicMock()
         #mock = Mock()
         mock[3] = 'fish'
